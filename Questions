@@ -1,0 +1,52 @@
+Q1 : String Transformation
+
+You are provided witb Two Strings, S1 and S2.In S1 you can perform operations such as adding, Removing or swapping Letters. Each operations has a specific cost value
+  -> If a letter is removed from S1, the cost is 0.
+  -> If a pair of letters are Swapped in S1, the cost is 0.
+  -> If a new letter is added to the end of S1, the cost is 1.
+Your task is to find and return an integer value representing the minimum cost required to transform the string S1 into S2
+
+[ Note: The String S1 and S2 consists uppercase alphabets only ]
+
+Input Specification:
+  Input 1 : A string value S1 representing the first string.
+  Input 2 : A String value S2 representing the target String.
+
+Output Specification:
+  Output : Return an integer value representing minimum cost required to transform the String s1 into s2.
+
+Example 1: 
+
+  Input-1 : ABD
+  Input-2 : AAbCCAD
+
+  Output : 4
+
+Explanation:
+  Here S1 = ABD and S2 = AABCCAD. We can perform the following steps to convert S1 into S2.
+      -> Add a new Element 'A' at the end of S1. This will make the composition ABDA.
+         Now Swap the last 'A', first with 'D' and then the 'B'. 
+         This will result in AABD and the cost will be 1.
+      
+      -> Add Two 'C' at the end. This will make the composition AABDCC. After this,swap the 
+        'D' with the last 'C'. This will result in AABCCD and the cost will be 2.
+
+      -> Add one 'A' to AABCCD to make the string AABCCAD and then swap the last 'A' with 'D'. This 
+         will finally make the string AABCCAD and the cost will be 1.
+
+      -> The total cost will be (1+2+1). Hence 4 is returned as the output.
+
+
+Example 2:
+
+  Input-1 : ABC
+  Input-2 : XYZ
+
+  Output : 3
+
+Explanation:
+  Here S1=ABC and S2 = XYZ .we can perform the follwing steps to convert S1 into S2.
+      -> Remove all the elements from S1. This will make it an empty string which will cost 0.
+      -> Add X,Y and then Z. which will cost 3.
+Since the total cost is 3 , 3 is returned as the output.
+ 
